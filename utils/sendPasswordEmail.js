@@ -21,7 +21,7 @@ const sendPasswordEmail = async (to, resetToken) => {
             requested the reset of the password.</p>
             <p>Please click on the following link, or paste this into your browser to complete
             the process</p>
-            <p>http://localhost:5173/reset-password/${resetToken}</p>
+            <p>https://blogginhub.netlify.app/reset-password/${resetToken}</p>
             <p>If you did not request this, please ignore this email and your password will remain unchanged.</p>`
         }
         //send the email

@@ -18,7 +18,7 @@ const sendNotificationMsg = async (to, postId) => {
             to,
             subject: 'New Post Created',
             html: `<p>A new post has been created on our site Blog Nest.</p>
-            <p>Click <a href="http://localhost:5173/posts/${postId}">here</a> to view the post.</p>`
+            <p>Click <a href="https://blogginhub.netlify.app/posts/${postId}">here</a> to view the post.</p>`
         }
         //send the email
         const info = await transporter.sendMail(message)
