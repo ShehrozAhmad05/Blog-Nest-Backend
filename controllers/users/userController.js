@@ -63,7 +63,8 @@ const userController = {
                 message: "Login Successfull",
                 username: user?.username,
                 email: user?.email,
-                _id: user?._id
+                _id: user?._id,
+                token: token
             })
         })(req, res, next);
     }),
@@ -104,7 +105,8 @@ const userController = {
 
     //check user authentication status
     checkAuthenticated: asyncHandler(async (req, res) => {
-        const token = req.cookies['token']
+        const {token} = req.body
+        //console.log(req.cookies)
         if (!token) {
             return res.status(401).json({
                 isAuthenticated: false,

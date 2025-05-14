@@ -82,7 +82,7 @@ passport.use(
         {
             clientID: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-            callbackURL: "https://blog-nest-backend-production.up.railway.app/api/v1/users/auth/google/callback",
+            callbackURL: "http://localhost:5000/api/v1/users/auth/google/callback",
         },
         async (accessToken, refreshToken, profile, done) => {
             try {
